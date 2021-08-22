@@ -279,3 +279,58 @@ path.current-room {
   margin-top: 55px;
   color: #635854;
 }
+
+.footer {
+  margin-top: 100px;
+  background: #d7d7d7;
+  border-top: 4px solid #3596f5;
+  padding: 50px 0 56px 0;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-contacts {
+  margin-left: 37px;
+  margin-right: 59px;
+}
+
+.footer-social a:not(:last-child) {
+  margin-right: 15px;
+}
+
+.footer-info .footer-text {
+  font-family: 'Roboto';
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  color: #635854;
+}
+
+.footer-info .footer-phone {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #635854;
+}
+
+.footer-links a {
+  text-decoration: underline;
+  color: #635854;
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 20px;
+}
