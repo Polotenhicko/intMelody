@@ -1,6 +1,7 @@
 $(document).ready(function () {
   let currentFloor = 2;
   let currentRoom = 7;
+  let usCurrentFloor = currentFloor;
   const counterUp = $('.counter-up');
   const counterDown = $('.counter-down');
   const floorPath = $('.home-img path');
@@ -26,6 +27,7 @@ $(document).ready(function () {
     floorPath.removeClass('current-floor');
     currentFloor = $(this).attr('data-floor');
     $('.counter').text(currentFloor);
+    $('.modal .current-floor').text(currentFloor);
   });
 
   floorPath.on('mouseout', function () {
@@ -62,26 +64,28 @@ $(document).ready(function () {
   counterUp.on('click', function () {
     if (currentFloor < 18) {
       currentFloor++;
-      usCorrentFloor = currentFloor.toLocaleString('en-US', {
+      usCurrentFloor = currentFloor.toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false,
       });
-      $('.counter').text(usCorrentFloor);
+      $('.counter').text(usCurrentFloor);
+      $('.modal .current-floor').text(usCurrentFloor);
       floorPath.removeClass('current-floor');
-      $(`[data-floor=${usCorrentFloor}]`).toggleClass('current-floor');
+      $(`[data-floor=${usCurrentFloor}]`).toggleClass('current-floor');
     }
   });
 
   counterDown.on('click', function () {
     if (currentFloor > 2) {
       currentFloor--;
-      usCorrentFloor = currentFloor.toLocaleString('en-US', {
+      usCurrentFloor = currentFloor.toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false,
       });
-      $('.counter').text(usCorrentFloor);
+      $('.counter').text(usCurrentFloor);
+      $('.modal .current-floor').text(usCurrentFloor);
       floorPath.removeClass('current-floor');
-      $(`[data-floor=${usCorrentFloor}]`).toggleClass('current-floor');
+      $(`[data-floor=${usCurrentFloor}]`).toggleClass('current-floor');
     }
   });
 });

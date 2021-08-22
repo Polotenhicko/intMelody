@@ -209,7 +209,8 @@ path.current-room {
   cursor: pointer;
 }
 
-.modal .modal-title {
+.modal .modal-title,
+.modal .current-floor {
   font-family: 'Bebas Neue';
   font-size: 24px;
   line-height: 29px;
